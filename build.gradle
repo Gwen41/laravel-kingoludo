@@ -42,7 +42,7 @@ task test(type:Exec) {
 
 task phploc(type: Exec, description: 'Measure project size using PHPLOC') {
 	executable 'sh'
-	args '-c', /usr/local/bin/phploc --count-tests \
+	args '-c',"phploc --count-tests \
     --log-csv='./build/phploc.csv' \
     --log-xml='./build/phploc.xml' \
      ./app"
